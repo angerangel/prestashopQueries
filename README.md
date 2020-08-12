@@ -1,1 +1,1 @@
-Here a series of queries for PRestashop
+Here a series of queries for Prestashop
