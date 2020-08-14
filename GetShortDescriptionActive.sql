@@ -5,7 +5,7 @@ SQL_CALC_FOUND_ROWS
 ps8n_product_lang.id_product ,
 ps8n_product_lang.name ,
 ps8n_product_lang.id_lang ,
-ps8n_product_lang.description_short  
+replace(ps8n_product_lang.description_short, '\n', ' ')
       FROM 
 	  ps8n_product_lang
 	  INNER JOIN
