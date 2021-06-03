@@ -6,4 +6,7 @@
 
 SELECT DISTINCT `id_product` , `name` FROM `ps8n_product_lang` #this help you to search id_product, add a WHERE clause to filter the result
 
+#This return all products without attachemnt
+SELECT DISTINCT `id_product` , `name` FROM `ps8n_product_lang` where not exists (Select DISTINCT id_product FROM ps8n_product_attachment WHERE id_product = ps8n_product_lang.id_product ) ; 
+
 INSERT INTO ps8n_product_attachment (id_product , id_attachment ) VALUES( 1, 1 ) ON DUPLICATE KEY UPDATE   #change 1 and 1 with the values you need
