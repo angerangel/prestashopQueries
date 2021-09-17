@@ -7,6 +7,6 @@ SELECT ps8n_product_lang.name,  ps8n_product_lang.description_short
       AND 
       ps8n_product_shop.active=true 
       AND
-      ps8n_product_land.id_lang=1;
+      ps8n_product_lang.id_lang=1;
       
       --This way we gat all in English
