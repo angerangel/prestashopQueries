@@ -8,6 +8,8 @@ SELECT DISTINCT `id_product` , `name` FROM `ps8n_product_lang` ; #this help you 
 
 SELECT id_attachment FROM ps8n_product_attachment WHERE id_product = 23 ;  #this way you find the id attachment of a product (change 23 with id of your product)
 
+SELECT file_name FROM ps8n_attachment WHERE `file`="0ab48f5cf9c0a85073b9232d7f364654959ab941"; # here you get the file neame from file hash ("file" in prestashop)
+
 #This return all products without attachemnt and active
 SELECT DISTINCT  id_product , name 
 FROM `ps8n_product_lang`
