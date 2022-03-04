@@ -1,3 +1,5 @@
+#Query to retrive code and short descriptionof the active product.
+
 SELECT ps8n_product_lang.name,  ps8n_product_lang.description_short   
    FROM ps8n_product,ps8n_product_lang,   ps8n_product_shop
    WHERE 
