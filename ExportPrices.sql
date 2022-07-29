@@ -1,7 +1,7 @@
 #This query export prices to an external file in CSV format, morevore it puts main category. 
 #This way you can create a price list to print for users, ordered by category and by code.
 #I have to use a variable for creating the query, because the SELECT statement doesn't permits function in file name.
-#The § char is very common onkeyboards, but nobody use it,so it's very handful to separate filed and avoi problems with carriage returns.
+#The § char is very common on keyboards, but nobody use it,so it's very handful to separate filed and avoi problems with carriage returns.
 
 SET @sql = CONCAT(
 "SELECT ps8n_category_lang.name, ps8n_product_lang.name, ps8n_product_lang.description_short,  ps8n_product.price  FROM  ps8n_product_lang, ps8n_product,  ps8n_product_shop, ps8n_category_lang
