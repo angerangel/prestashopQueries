@@ -3,6 +3,7 @@
 #I have to use a variable for creating the query, because the SELECT statement doesn't permits function in file name.
 #The § char is very common on keyboards, but nobody use it,so it's very handful to separate fields and avoid problems with carriage returns.
 #It show the last 2 parent categories (Example: Parts/Wheels)
+#Please note that MySql permits to write only in a specific folder, in my case (ububtu) /var/lib/mysql-files .
 
 SET @sql = CONCAT(
     "SELECT
