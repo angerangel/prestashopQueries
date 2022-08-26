@@ -5,12 +5,13 @@
 #It show the last 2 parent categories (Example: Parts/Wheels)
 #Please note that MySql permits to write only in a specific folder, in my case (ububtu) /var/lib/mysql-files .
 
+
 SET @sql = CONCAT(
     "SELECT
         ps8n_category_lang.name, t1.cname, t1.pname, t1.ds,t1.price
      FROM
      ps8n_category_lang,  ps8n_category,
-    (SELECT  ps8n_product.id_category_default as 'id_c', ps8n_category_lang.name as 'cname', ps8n_product_lang.name as 'pname', ps8n_product_lang.description_short as 'ds',  ps8n_product.price as 'price' 
+    (SELECT  ps8n_product.id_category_default as 'id_c', ps8n_category_lang.name as 'cname', ps8n_product_lang.name as 'pname', replace(ps8n_product_lang.description_short,'\n','' ) as 'ds',  ps8n_product.price as 'price' 
          FROM  ps8n_product_lang, ps8n_product,  ps8n_product_shop, ps8n_category_lang 
         WHERE 
         ps8n_product.id_product=ps8n_product_lang.id_product
@@ -32,7 +33,7 @@ SET @sql = CONCAT(
         ps8n_category_lang.id_lang=2 
     ORDER BY ps8n_category_lang.name, t1.cname, t1.pname
     INTO OUTFILE '",
-    CONCAT('/var/lib/mysql-files/Listino-',  NOW() + 0, '.csv\' ') ,  " FIELDS ENCLOSED BY '§' ;" 
+    CONCAT('/var/lib/mysql-files/Listino-',  NOW() + 0, '.csv\' ') ,  " FIELDS ENCLOSED BY '§' ;"
     );
 
     PREPARE statement FROM @sql;
