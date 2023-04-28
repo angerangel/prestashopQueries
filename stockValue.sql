@@ -10,7 +10,7 @@ SELECT SUM(`quantity` * `price`) FROM ps8n_product WHERE active=true ;
 #TIP: to get brand numbers just use:  
 #     select * from ps8n_manufacturer  ;
 
-SELECT  ps8n_product_lang.name, ps8n_product.quantity  , ps8n_product.price  
+SELECT DISTINCT ps8n_product_lang.name, ps8n_product.quantity  , ps8n_product.price  
 FROM  ps8n_product_lang, ps8n_product, ps8n_product_shop
 WHERE
 ps8n_product.id_product=ps8n_product_lang.id_product
