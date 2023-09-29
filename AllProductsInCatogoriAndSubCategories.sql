@@ -19,6 +19,4 @@ ps8n_product_shop.id_product = ps8n_product_lang.id_product
 AND 
 ps8n_product.id_category_default  IN  (select id_category from ps8n_category WHERE id_parent=991 )
 AND
-ps8n_product.id_product = ps8n_product_lang.id_product
-
-;
+ps8n_product.id_product = ps8n_product_lang.id_product ;
