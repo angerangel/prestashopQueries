@@ -1,4 +1,4 @@
-#This code show all the short description of the active product of a category, and of a signle language of you choiche.
+--This code show all the short description of the active product of a category, and of a signle language of you choiche.
 
 SELECT DISTINCT ps8n_product_lang.name,  ps8n_product_lang.description_short   
 FROM ps8n_product, ps8n_product_lang,   ps8n_product_shop   
