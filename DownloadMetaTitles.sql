@@ -1,4 +1,4 @@
-#Download Meta Titles
+--Download Meta Titles
 
 select  name, meta_title FROM ps8n_product_lang, ps8n_product_shop  
      WHERE 
