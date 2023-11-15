@@ -1,4 +1,4 @@
-#This get all short description of active products
+--This get all short description of active products
 
 Select   
 SQL_CALC_FOUND_ROWS 
