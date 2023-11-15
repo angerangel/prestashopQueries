@@ -1,4 +1,4 @@
---GET the toal value of product in stock, only active products
+--GET the total value of product in stock, only active products
 
 SELECT SUM(`quantity` * `price`) FROM ps8n_product WHERE active=true ;
 
