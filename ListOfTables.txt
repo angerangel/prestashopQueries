@@ -1,4 +1,4 @@
-Prestashop table List 
+= Prestashop table List  =
 
  ps8n_access                                       
  ps8n_accessory                                    
@@ -322,3 +322,68 @@ Prestashop table List
  ps8n_xpay_payments_redirect                       
  ps8n_zone                                         
  ps8n_zone_shop               
+
+== ps8n_product  ==
+
++---------------------------+-----------------------------------------------------------------------+------+-----+----------+----------------+
+| Field                     | Type                                                                  | Null | Key | Default  | Extra          |
++---------------------------+-----------------------------------------------------------------------+------+-----+----------+----------------+
+| id_product                | int unsigned                                                          | NO   | PRI | NULL     | auto_increment |
+| id_supplier               | int unsigned                                                          | YES  | MUL | NULL     |                |
+| id_manufacturer           | int unsigned                                                          | YES  | MUL | NULL     |                |
+| id_category_default       | int unsigned                                                          | YES  | MUL | NULL     |                |
+| id_shop_default           | int unsigned                                                          | NO   |     | 1        |                |
+| id_tax_rules_group        | int unsigned                                                          | NO   |     | NULL     |                |
+| on_sale                   | tinyint unsigned                                                      | NO   |     | 0        |                |
+| online_only               | tinyint unsigned                                                      | NO   |     | 0        |                |
+| ean13                     | varchar(13)                                                           | YES  |     | NULL     |                |
+| isbn                      | varchar(32)                                                           | YES  |     | NULL     |                |
+| upc                       | varchar(12)                                                           | YES  |     | NULL     |                |
+| mpn                       | varchar(40)                                                           | YES  |     | NULL     |                |
+| ecotax                    | decimal(17,6)                                                         | NO   |     | 0.000000 |                |
+| quantity                  | int                                                                   | NO   |     | 0        |                |
+| minimal_quantity          | int unsigned                                                          | NO   |     | 1        |                |
+| low_stock_threshold       | int                                                                   | YES  |     | NULL     |                |
+| low_stock_alert           | tinyint(1)                                                            | NO   |     | 0        |                |
+| price                     | decimal(20,6)                                                         | NO   |     | 0.000000 |                |
+| wholesale_price           | decimal(20,6)                                                         | NO   |     | 0.000000 |                |
+| unity                     | varchar(255)                                                          | YES  |     | NULL     |                |
+| unit_price_ratio          | decimal(20,6)                                                         | NO   |     | 0.000000 |                |
+| additional_shipping_cost  | decimal(20,6)                                                         | NO   |     | 0.000000 |                |
+| reference                 | varchar(64)                                                           | YES  | MUL | NULL     |                |
+| supplier_reference        | varchar(64)                                                           | YES  | MUL | NULL     |                |
+| location                  | varchar(255)                                                          | NO   |     |          |                |
+| width                     | decimal(20,6)                                                         | NO   |     | 0.000000 |                |
+| height                    | decimal(20,6)                                                         | NO   |     | 0.000000 |                |
+| depth                     | decimal(20,6)                                                         | NO   |     | 0.000000 |                |
+| weight                    | decimal(20,6)                                                         | NO   |     | 0.000000 |                |
+| out_of_stock              | int unsigned                                                          | NO   |     | 2        |                |
+| additional_delivery_times | tinyint unsigned                                                      | NO   |     | 1        |                |
+| quantity_discount         | tinyint(1)                                                            | YES  |     | 0        |                |
+| customizable              | tinyint                                                               | NO   |     | 0        |                |
+| uploadable_files          | tinyint                                                               | NO   |     | 0        |                |
+| text_fields               | tinyint                                                               | NO   |     | 0        |                |
+| active                    | tinyint unsigned                                                      | NO   |     | 0        |                |
+| redirect_type             | enum('404','301-product','302-product','301-category','302-category') | NO   |     | 404      |                |
+| id_type_redirected        | int unsigned                                                          | NO   |     | 0        |                |
+| available_for_order       | tinyint(1)                                                            | NO   |     | 1        |                |
+| available_date            | date                                                                  | YES  |     | NULL     |                |
+| show_condition            | tinyint(1)                                                            | NO   |     | 0        |                |
+| condition                 | enum('new','used','refurbished')                                      | NO   |     | new      |                |
+| show_price                | tinyint(1)                                                            | NO   |     | 1        |                |
+| indexed                   | tinyint(1)                                                            | NO   | MUL | 0        |                |
+| visibility                | enum('both','catalog','search','none')                                | NO   |     | both     |                |
+| cache_is_pack             | tinyint(1)                                                            | NO   |     | 0        |                |
+| cache_has_attachments     | tinyint(1)                                                            | NO   |     | 0        |                |
+| is_virtual                | tinyint(1)                                                            | NO   |     | 0        |                |
+| cache_default_attribute   | int unsigned                                                          | YES  |     | NULL     |                |
+| date_add                  | datetime                                                              | NO   | MUL | NULL     |                |
+| date_upd                  | datetime                                                              | NO   |     | NULL     |                |
+| advanced_stock_management | tinyint(1)                                                            | NO   |     | 0        |                |
+| pack_stock_type           | int unsigned                                                          | NO   |     | 3        |                |
+| state                     | int unsigned                                                          | NO   | MUL | 1        |                |
+| product_type              | enum('standard','pack','virtual','combinations')                      | NO   |     | standard |                |
++---------------------------+-----------------------------------------------------------------------+------+-----+----------+----------------+
+
+
+
