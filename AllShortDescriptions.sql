@@ -6,7 +6,7 @@ WHERE
 ps8n_product.id_product =  ps8n_product_lang.id_product     
 AND   ps8n_product.id_product =  ps8n_product_shop.id_product     
 AND        ps8n_product_shop.active=true     
-AND       ps8n_product_lang.id_lang=1  #language
-AND       ps8n_product.id_category_default = 993  #category
+AND       ps8n_product_lang.id_lang=1  --language
+AND       ps8n_product.id_category_default = 993  --category
 ORDER BY ps8n_product_lang.name    ;
 
