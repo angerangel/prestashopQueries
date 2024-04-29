@@ -14,6 +14,6 @@ ps8n_product.id_product=ps8n_product_lang.id_product
 AND
 ps8n_product.id_product=ps8n_product_shop.id_product
 AND
-ps8n_product.id_manufacturer=4 
+ps8n_product.id_manufacturer=4 --this is the brand id number
 AND 
 ps8n_product_shop.active=true ;
