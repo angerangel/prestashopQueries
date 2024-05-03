@@ -1,9 +1,9 @@
--- First of all let's find the id of aour category:
+-- First of all let's find the id of our category:
 
  select id_category from ps8n_category_lang where name like 'FatherCategory';
  
  
- -- Now we get all products childred, for example ID of father is 991
+ -- Now we get all children products, for example ID of father is 991
  
 SELECT DISTINCT
 ps8n_product_lang.name ,
