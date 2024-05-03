@@ -403,3 +403,12 @@
 | is_root_category | tinyint(1)       | NO   |     | 0       |                |
 +------------------+------------------+------+-----+---------+----------------+
 
+== ps8n_category_product ==
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| id_category | int unsigned | NO   | PRI | NULL    |       |
+| id_product  | int unsigned | NO   | PRI | NULL    |       |
+| position    | int unsigned | NO   |     | 0       |       |
++-------------+--------------+------+-----+---------+-------+
+
