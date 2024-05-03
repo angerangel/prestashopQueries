@@ -385,5 +385,21 @@
 | product_type              | enum('standard','pack','virtual','combinations')                      | NO   |     | standard |                |
 +---------------------------+-----------------------------------------------------------------------+------+-----+----------+----------------+
 
+== ps8n_category ==
 
++------------------+------------------+------+-----+---------+----------------+
+| Field            | Type             | Null | Key | Default | Extra          |
++------------------+------------------+------+-----+---------+----------------+
+| id_category      | int unsigned     | NO   | PRI | NULL    | auto_increment |
+| id_parent        | int unsigned     | NO   | MUL | NULL    |                |
+| id_shop_default  | int unsigned     | NO   |     | 1       |                |
+| level_depth      | tinyint unsigned | NO   | MUL | 0       |                |
+| nleft            | int unsigned     | NO   | MUL | 0       |                |
+| nright           | int unsigned     | NO   | MUL | 0       |                |
+| active           | tinyint unsigned | NO   | MUL | 0       |                |
+| date_add         | datetime         | NO   |     | NULL    |                |
+| date_upd         | datetime         | NO   |     | NULL    |                |
+| position         | int unsigned     | NO   |     | 0       |                |
+| is_root_category | tinyint(1)       | NO   |     | 0       |                |
++------------------+------------------+------+-----+---------+----------------+
 
