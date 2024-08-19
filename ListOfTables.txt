@@ -412,3 +412,12 @@
 | position    | int unsigned | NO   |     | 0       |       |
 +-------------+--------------+------+-----+---------+-------+
 
+==  ps8n_product_carrier ==
++----------------------+--------------+------+-----+---------+-------+
+| Field                | Type         | Null | Key | Default | Extra |
++----------------------+--------------+------+-----+---------+-------+
+| id_product           | int unsigned | NO   | PRI | NULL    |       |
+| id_carrier_reference | int unsigned | NO   | PRI | NULL    |       |
+| id_shop              | int unsigned | NO   | PRI | NULL    |       |
++----------------------+--------------+------+-----+---------+-------+
+
