@@ -1,4 +1,4 @@
---Get all active products with minimum rder quantiy greater than 1
+--Get all active products with minimum order quantiy greater than 1
 
 SELECT ps8n_product_lang.name, ps8n_product_lang.description_short ,  ps8n_product.minimal_quantity
 FROM ps8n_product,ps8n_product_lang, ps8n_product_shop 
