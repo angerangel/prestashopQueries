@@ -421,3 +421,16 @@
 | id_shop              | int unsigned | NO   | PRI | NULL    |       |
 +----------------------+--------------+------+-----+---------+-------+
 
+== ps8n_translation ==
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| id_translation | int         | NO   | PRI | NULL    | auto_increment |
+| id_lang        | int         | NO   | MUL | NULL    |                |
+| key            | text        | NO   |     | NULL    |                |
+| translation    | mediumtext  | NO   |     | NULL    |                |
+| domain         | varchar(80) | NO   | MUL | NULL    |                |
+| theme          | varchar(32) | YES  |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
+ 
+
