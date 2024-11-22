@@ -14,6 +14,21 @@ ps8n_product.id_product=ps8n_product_lang.id_product
 AND
 ps8n_product.id_product=ps8n_product_shop.id_product
 AND
-ps8n_product.id_manufacturer=4 --this is the brand id number
+ps8n_product.id_manufacturer=4 /*this is the brand id number*/
 AND 
 ps8n_product_shop.active=true ;
+
+--Get total of active of a brand
+SELECT DISTINCT SUM( ps8n_product.quantity * ps8n_product.price)   
+FROM  ps8n_product_lang, ps8n_product, ps8n_product_shop
+WHERE
+ps8n_product.id_product=ps8n_product_lang.id_product
+AND
+ps8n_product.id_product=ps8n_product_shop.id_product
+AND
+ps8n_product.id_manufacturer=4 /*this is the brand id number*/
+AND 
+ps8n_product_shop.active=true 
+ ;
+
+
