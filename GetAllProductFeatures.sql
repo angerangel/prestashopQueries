@@ -16,3 +16,13 @@ AND ps8n_feature_product.id_feature = ps8n_feature_lang.id_feature
 AND ps8n_feature_value_lang.id_feature_value = ps8n_feature_product.id_feature_value
 order BY ps8n_product_lang.name, ps8n_feature_lang.name
 ;
+
+/* result:
++------------+------------+-------------------------------------------------------------+---------------+--------+
+| id_product | name       | description_short                                           | name          | value  |
++------------+------------+-------------------------------------------------------------+---------------+--------+
+|      33382 | cap        | blue cap                                                    | Color         | blue   |
+|      33382 | plug       | blue plug                                                   | Color         | blue   |
+|      33383 | fitting    | Union fitting                                               | Size          | 10mm   |
++------------+------------+-------------------------------------------------------------+---------------+--------+
+*/
