@@ -1,4 +1,4 @@
---Get the discounted product active
+--Get the discounted products active
 
 SELECT ps8n_product_lang.name ,  ps8n_product.id_product   
    FROM ps8n_product,ps8n_product_lang,   ps8n_product_shop
