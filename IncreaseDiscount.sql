@@ -1,4 +1,4 @@
---To increase discoutn of 1%
+--To increase discount of 1%
 
 UPDATE ps8n_specific_price
    set reduction =  reduction + 0.01
