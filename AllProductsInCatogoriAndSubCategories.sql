@@ -20,3 +20,21 @@ AND
 ps8n_product.id_category_default  IN  (select id_category from ps8n_category WHERE id_parent=991 )
 AND
 ps8n_product.id_product = ps8n_product_lang.id_product ;
+
+
+/*in Order to get all product of a category (for example 996):*/
+
+SELECT DISTINCT
+ps8n_product_lang.name 
+FROM
+ps8n_product_lang, ps8n_product_shop, ps8n_product
+WHERE
+ps8n_product_shop.active = 1
+AND
+ps8n_product_lang.id_lang =2
+AND
+ps8n_product_shop.id_product = ps8n_product_lang.id_product
+AND 
+ps8n_product.id_category_default=996
+AND
+ps8n_product.id_product = ps8n_product_lang.id_product ;
