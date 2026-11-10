@@ -1,4 +1,4 @@
---If you don't set the same adress style for al countries, 
+--If you don't set the same address style for al countries, 
 -- you'll have big trouble in Prestashop cart, 
 -- because some mandatory fields of your defaul country will be missing from other countries customer
 --Every time the user change country address, Prestashop change the fileds showed to user. Too bad
